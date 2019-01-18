@@ -1,5 +1,3 @@
-
-
 describe('Bubble Sort', function(){
   beforeAll(function(){
     spyOn(window, 'swap').and.callThrough()
@@ -23,7 +21,7 @@ describe('Bubble Sort', function(){
     expect(compare.calls).toHaveBeenCalledTimes(15)
   })
   
-  // it('handles a length array', function(){
+  // it('handles a lengthy array', function(){
   //   expect(bubbleSort([99,40,2,27,15,0,9,14,13,12,88,98])).toEqual([0,2,9,12,13,14,15,27,40,88,98,99])
   // })
 })

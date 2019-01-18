@@ -22,7 +22,7 @@ function bubbleSort(array) {
             }
         }
          if (swapCounter===0){
-             break;
+             break
          }
     }
     return array
