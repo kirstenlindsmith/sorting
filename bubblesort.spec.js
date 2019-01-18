@@ -2,25 +2,25 @@
 
 describe('Bubble Sort', function(){
   beforeAll(function(){
-    spyOn(swap).and.callThrough()
-    spyOn(compare).and.callThrough()
+    spyOn(window, 'swap').and.callThrough()
+    spyOn(window, 'compare').and.callThrough()
   })
   it('handles an empty array', function(){
     expect(bubbleSort([])).toEqual([])
-    expect(swap.calls.count()).toEqual(0)
-    expect(compare.calls.count()).toEqual(0)
+    expect(window.swap).toHaveBeenCalledTimes(0)
+    expect(window.compare).toHaveBeenCalledTimes(0)
   })
   
   it('handles a one-element array', function(){
     expect(bubbleSort([1])).toEqual([1])
-    expect(swap.calls.count()).toEqual(0)
-    expect(compare.calls.count()).toEqual(0)
+    expect(window.swap).toHaveBeenCalledTimes(0)
+    expect(window.compare).toHaveBeenCalledTimes(0)
   })
   
   it('handles a multi-element array', function(){
     expect(bubbleSort([9,1,4,2])).toEqual([1,2,4,9])
-    expect(swap.calls.count()).toEqual(4)
-    expect(compare.calls.count()).toEqual(15)
+    expect(swap.calls).toHaveBeenCalledTimes(4)
+    expect(compare.calls).toHaveBeenCalledTimes(15)
   })
   
   // it('handles a length array', function(){
